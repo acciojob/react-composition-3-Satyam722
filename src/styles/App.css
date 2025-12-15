@@ -1,21 +1,31 @@
+/* styles/App.css */
+
+/* * 1. The container for the children element (App.js provides the 'tooltip' class)
+ * Must be positioned relative to anchor the absolutely positioned tooltip text.
+ */
 .tooltip {
-    position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+  position: relative;
+  display: inline-block; /* Crucial: only wraps the content, not the full width */
+  cursor: pointer;
 }
 
+/* * 2. The tooltip text container (App.js provides the 'tooltiptext' class)
+ */
 .tooltiptext {
-  background-color:red;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 4px;
-
+  /* Positioning: Makes the text float relative to the 'tooltip' container */
   position: absolute;
-  bottom: 50%;        /* 👈 upar shift */
+  
+  /* Example Positioning: Above the hovered content */
+  bottom: 120%; 
   left: 50%;
-  transform: translateX(100%);
+  transform: translateX(-50%); /* Centers the tooltip horizontally */
 
-  white-space: nowrap;
+  /* Basic Appearance */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  z-index: 1000; /* Ensure it appears on top */
+  white-space: nowrap; /* Prevent text wrapping */
 }
