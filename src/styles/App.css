@@ -1,1 +1,21 @@
+.tooltip {
+    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 
+.tooltiptext {
+  background-color:red;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+
+  position: absolute;
+  bottom: 50%;        /* 👈 upar shift */
+  left: 50%;
+  transform: translateX(100%);
+
+  white-space: nowrap;
+}
