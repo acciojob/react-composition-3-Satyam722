@@ -1,1 +1,31 @@
 
+/* styles/App.css */
+
+/* 1. Container for the children element */
+.tooltip {
+  /* Must be relative to anchor the absolute-positioned tooltip text */
+  position: relative; 
+  /* Ensures the container only takes up the space of its children */
+  display: inline-block; 
+  cursor: pointer;
+}
+
+/* 2. The actual tooltip text */
+.tooltiptext {
+  /* Positioning: Makes the text float relative to the 'tooltip' container */
+  position: absolute;
+  
+  /* Example Positioning: Places the tooltip box above the hovered content */
+  bottom: 120%; 
+  left: 50%;
+  transform: translateX(-50%); /* Centers the tooltip horizontally */
+
+  /* Basic Appearance */
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  z-index: 1000;
+  white-space: nowrap; 
+}
